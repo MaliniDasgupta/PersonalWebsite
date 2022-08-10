@@ -420,3 +420,35 @@ img{
     padding-left: 35%;
     }
 } */
+
+/* media queries */
+@media (max-width: 1000px) {
+    .content{
+        display: flex;
+        flex-direction: column;
+    } 
+
+    #myImage{
+        align-self: center;
+        margin-left: 0;
+        margin-right: 11%;
+        width: 40%;
+        height: 40%;
+    }
+
+    .write-up {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-right: 20%;
+        padding-top: 20%;
+        padding-bottom: 30%;
+    }
+    .tw {
+        padding-bottom: 10%;
+    }
+    .degree {
+        padding-top: 13%;
+    }
+    
+}
