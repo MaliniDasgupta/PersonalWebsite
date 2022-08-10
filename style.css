@@ -12,7 +12,7 @@
   
 }
 .toolbar {
-    position: absolute;
+    position: relative;
     top: 0;
     left: 0;
     right: 0;
@@ -23,6 +23,7 @@
     font-weight: 900;
     padding-left: 2%;
     padding-right: 2%;
+    padding-top: 1%;
   }
 
 .spacer {
@@ -34,6 +35,8 @@
     text-decoration: none;
     padding: 1%;
     font-size: larger;
+    min-width: 80px;
+    transition: all 0.2s ease;
   } 
 
 .links:hover {
@@ -76,10 +79,11 @@
 .tw {
     font-weight: bold;
     color: #6987A9;
-    font-size: 330%;
+    font-size: 3em;
     padding-bottom: 2%;
     padding-left: 1%;
-    position: absolute;;
+    height: 50px;
+    white-space: nowrap;
 }
 
 .write-up {
@@ -89,10 +93,8 @@
 
 .degree {
   padding-left: 3%;
-  padding-top: 8%;
   font-size: larger;
   font-weight: bold;
-  position: absolute;
   text-align: center;
   align-items: center;
   justify-content: center;
@@ -101,6 +103,7 @@
 
 #uc-davis {
     font-size: x-large;
+    white-space: nowrap;
 }
 
 /* @media (max-width: 1000px) {
@@ -204,7 +207,7 @@
     border: 1px solid #FFFFF1;
     border-radius: 25px;
     color: #6987A9;
-    margin: 2%;
+    margin: 4%;
 }
 .company { 
     color: #6987A9;
@@ -215,7 +218,16 @@
 }
 
 .role {
-    padding: 2%;
+    padding: 4%;
+    position: relative;
+}
+
+.role img {
+    height: 80px;
+    width: auto;
+    position: absolute;
+    right: 20px;
+    top: 20px;
 }
 
 label {
@@ -230,18 +242,27 @@ input {
     padding-top:2%;
     padding-bottom: 2%;
 }
+.project-links {
+    display: flex;
+    align-items: center;
+}
 .button { 
     background-color: #F1A15B;
     color: #01234A;
     padding: 1.5%;
     border-radius: 25px;
     text-decoration: none;
-    margin-top: 2%;
+    margin: 2%;
     font-size: 80%;
     font-weight: 80%;
-    margin-left: 2%;
-    margin-right: 2%;
+    display: inline-block;
+    min-width: 80px;
+    text-align: center;
+    transition: all 0.2s ease;
+}
 
+.button:hover {
+    transform: scale(1.1);
 }
 
 .date { 
@@ -257,7 +278,7 @@ img{
     width: 12%;
 }
 
-#quantiphi {
+/* #quantiphi {
     padding-left: 60%;
     padding-top: 1%;
     
@@ -284,7 +305,7 @@ img{
 }
 #pahunch {
     padding-left: 58%;
-}
+} */
 .role-description {
     max-height: 0;
     overflow: hidden;
@@ -350,10 +371,19 @@ img{
     align-items: center;
     font-size: small;
     justify-content: center;
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.footer.relative {
+    position: relative;
 }
 
 .contact {
-    padding: 4%;
+    padding: 12px;
+    display: flex;
 }
 .contact-icon {
     float: left;
@@ -425,8 +455,11 @@ img{
 
 /* media queries */
 @media (max-width: 1000px) {
+    .tw {
+        padding-bottom: 0;
+        margin-bottom: 2%;
+    }
     .content{
-        display: flex;
         flex-direction: column;
     } 
 
@@ -434,23 +467,47 @@ img{
         align-self: center;
         margin-left: 0;
         margin-right: 11%;
-        width: 40%;
-        height: 40%;
+        width: 30%;
     }
 
     .write-up {
         display: flex;
+        flex-direction: column;
         align-items: center;
         justify-content: center;
         padding-right: 20%;
-        padding-top: 20%;
-        padding-bottom: 30%;
     }
+
+    .short {
+        flex-direction: column-reverse;
+    }
+
+    .role img {
+        height: auto;
+        width: 70px;
+        position: relative;
+        left: 10px;
+        top: 10px;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 650px) {
     .tw {
-        padding-bottom: 10%;
-    }
-    .degree {
-        padding-top: 13%;
+        font-size: 2em;
     }
     
+    #myImage {
+        width: 40%;
+    }
+
+    .work {
+        width: 80%;
+    }
+
+    .footer {
+        flex-direction: column;
+        margin-bottom: 20px;
+        margin-top: 30px;
+    }
 }
