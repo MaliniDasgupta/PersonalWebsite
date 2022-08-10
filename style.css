@@ -42,6 +42,7 @@
 }
 
 /* landing page */
+
 #MD{
       padding-left: 3%;
       font-size: x-large;
@@ -74,6 +75,7 @@
 
 .tw {
     font-weight: bold;
+    color: #6987A9;
     font-size: 330%;
     padding-bottom: 2%;
     padding-left: 1%;

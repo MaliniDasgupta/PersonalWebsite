@@ -1,22 +1,12 @@
-// let disp = true;
-// let landing = document.querySelector('.landing');
-// let work = document.querySelector('.work');
-
-// work.style.display="none";
-
-// // function ClickWork() {
-// //     if(disp){
-// //         work.style.display="block";
-// //         landing.style.display="n";
-// //     }
-    
-// // }
-// // function ClickLanding() {
-// //   if(!disp){
-// //     work.style.display="block";
-// //     landing.style.display="none";
-// //   }
-// // }
+var typed = new Typed(".tw", {
+    strings: ["Malini Dasgupta", "Malini Dasgupta", "मालिनी दासगुप्ता", "মালিনী দাসগুপ্ত"],
+    typeSpeed: 80,
+    backSpeed: 80,
+    typeSpeed: 80,
+    backSpeed: 80,
+    loop: true,
+    showCursor: false
+});
 
 let disp = true;
 let landing = document.querySelector('.landing');
@@ -28,6 +18,7 @@ let md = document.getElementById('MD');
 let w = document.getElementById('w');
 
 md.addEventListener("click", function() {
+    console.log("Hello");
     if(!disp) {
         work.style.display="none";
         landing.style.display="block";
@@ -36,9 +27,12 @@ md.addEventListener("click", function() {
 });
 
 w.addEventListener("click", function() {
+    console.log("Hell1");
     if(disp) {
         work.style.display="block";
         landing.style.display="none";
         disp=!disp;
     }
 });
+
+
