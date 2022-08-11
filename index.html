@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <!-- <title>Website</title>
-  <base href="/">
-  <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+  <base href="/"> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1"> 
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -12,9 +12,11 @@
         <div class="toolbar" role="banner">
             <p id="MD" class="links"> MD </p>
             <div class="spacer"></div>
-            <p id="w" class="links"> Work </p>
-            <a class="links" href="assets/Malini_Dasgupta_Resume.pdf" target="_blank"> Resume </a>
-            <a class="links" href="https://www.linkedin.com/in/malinidasgupta/" target="_blank"> LinkedIn </a>
+            <div class="nav">
+                <p id="w" class="links"> Work </p>
+                <a class="links" href="assets/Malini_Dasgupta_Resume.pdf" target="_blank"> Resume </a>
+                <a class="links" href="https://www.linkedin.com/in/malinidasgupta/" target="_blank"> LinkedIn </a>
+            </div>
         </div>
 
         <div class="landing">
@@ -106,7 +108,7 @@
                             <li> Each user has their own dashboard that reflects their progress in the form of bar charts and sends them reminders of their up coming activities </li>
                             <li> Software Used: HTML, CSS, NodeJS, SQLite</li>
                         </ul>
-                        <div class="links">
+                        <div class="project-links">
                             <a href="https://tractivity-fitness-app.herokuapp.com/" target="_blank" class="button"> Application </a>
                             <a href="https://github.com/MaliniDasgupta/Tractivity" target="_blank" class="button"> Github </a>
                         </div>
@@ -157,7 +159,7 @@
                             <li> Finalized a design and implemented it using 3D printing, sensors and arduino </li>
                             <li> Crowdfunded over $2000 and supplied outsourced dispensers to 14 government schools </li> 
                         </ul> 
-                        <div class="links">
+                        <div class="project-links">
                             <a href ="https://www.makertour.fr/fr/projects/sanitary-napkin-dispenser" target="_blank" class="button"> Watch Here </a>
                             <a href="https://www.thehindu.com/news/cities/mumbai/schoolgirls-create-sanitary-napkin-dispenser/article19137286.ece" target="_blank" class="button"> Read More </a>
                         </div>
@@ -216,7 +218,7 @@
                             <li> Curated content for the social media page to promote more donations and engagement </li> 
                             <li> Organized bi-weekly donation drives with NGOs to distribute collected devices to over 200 students </li> 
                         </ul>
-                        <div class="links">
+                        <div class="project-links">
                             <a href="https://livewire.thewire.in/campus/how-project-pahunch-is-taking-steps-to-help-provide-access-to-online-education/" target="_blank" class="button"> Read More </a>
                         </div>
                     </div>            
@@ -227,24 +229,36 @@
 
         <div class="footer">
             <div class="contact" id="mail">
-                <div class="contact-icon"> 
-                    <img id="mail-logo" src="https://img.icons8.com/material-outlined/24/f1a15b/new-post.png" alt="mail"/>            
-                </div>
-                <a id="mail-link" href="mailto:malinidasgupta2000@gmail.com" target="_blank">malinidasgupta2000@gmail.com </a>
+                <a id="mail-link" href="mailto:malinidasgupta2000@gmail.com" target="_blank">
+                    <div class="contact-icon"> 
+                        <img id="mail-logo" src="https://img.icons8.com/material-outlined/24/f1a15b/new-post.png" alt="mail"/>            
+                    </div>
+                    <div class="footer-link">
+                        malinidasgupta2000@gmail.com
+                    </div>
+                </a>
             </div>
 
             <div class="contact" id="linkedIn">
-                <div class="contact-icon"> 
-                    <img id="linkedIn-logo" src="https://img.icons8.com/ios/50/f1a15b/linkedin-circled--v1.png" alt="linkedIn"/>            
-                </div>
-                <a id="linkedIn-link" href="https://www.linkedin.com/in/malinidasgupta/" target="_blank"> malinidasgupta </a>
+                <a id="linkedIn-link" href="https://www.linkedin.com/in/malinidasgupta/" target="_blank"> 
+                    <div class="contact-icon"> 
+                        <img id="linkedIn-logo" src="https://img.icons8.com/ios/50/f1a15b/linkedin-circled--v1.png" alt="linkedIn"/>            
+                    </div>
+                    <div class="footer-link">
+                        malinidasgupta 
+                    </div>
+                </a>
             </div>
 
             <div class="contact" id="phone">
-                <div class="contact-icon"> 
-                    <img id="phone-logo" src="https://img.icons8.com/fluency-systems-regular/48/f1a15b/phone.png" alt="phone"/>            
-                </div>
-                <a id="phone-no">+1(510)5705174</a>
+                <a id="phone-no" href="tel:+15105705174">
+                    <div class="contact-icon"> 
+                        <img id="phone-logo" src="https://img.icons8.com/fluency-systems-regular/48/f1a15b/phone.png" alt="phone"/>            
+                    </div>
+                    <div class="footer-link">
+                        +1(510)&nbsp;570&nbsp;5174
+                    </div>
+                </a>
             </div>
         </div>
     </div>

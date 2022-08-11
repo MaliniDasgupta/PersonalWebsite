@@ -11,6 +11,7 @@ var typed = new Typed(".tw", {
 let disp = true;
 let landing = document.querySelector('.landing');
 let work = document.querySelector('.work');
+let footer = document.querySelector('.footer');
 
 work.style.display="none";
 
@@ -22,6 +23,7 @@ md.addEventListener("click", function() {
     if(!disp) {
         work.style.display="none";
         landing.style.display="block";
+        footer.classList.remove("relative");
         disp = !disp;
     }
 });
@@ -31,6 +33,7 @@ w.addEventListener("click", function() {
     if(disp) {
         work.style.display="block";
         landing.style.display="none";
+        footer.classList.add("relative");
         disp=!disp;
     }
 });

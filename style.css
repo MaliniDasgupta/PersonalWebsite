@@ -12,7 +12,7 @@
   
 }
 .toolbar {
-    position: absolute;
+    position: relative;
     top: 0;
     left: 0;
     right: 0;
@@ -23,22 +23,30 @@
     font-weight: 900;
     padding-left: 2%;
     padding-right: 2%;
+    padding-top: 1%;
   }
 
 .spacer {
     flex: 1;
   }
 
+.nav {
+    display: flex;
+    align-items: center;
+}
+
 .links {
     color: #FFFFF1;
     text-decoration: none;
     padding: 1%;
-    font-size: larger;
+    min-width: 80px;
+    font-size: 1em;
+    transition: 0.2s ease;
   } 
 
 .links:hover {
-  font-size: 130%;
-  cursor: pointer
+  font-size: 1.2em;
+  cursor: pointer;
 }
 
 /* landing page */
@@ -53,7 +61,7 @@
   }
 
 .content {
-    margin: 7%;
+    margin: 5% 7%;
     margin-left: 20%;
     display: flex;
     flex-direction: row;
@@ -76,10 +84,11 @@
 .tw {
     font-weight: bold;
     color: #6987A9;
-    font-size: 330%;
+    font-size: 3em;
     padding-bottom: 2%;
     padding-left: 1%;
-    position: absolute;;
+    height: 50px;
+    white-space: nowrap;
 }
 
 .write-up {
@@ -89,10 +98,8 @@
 
 .degree {
   padding-left: 3%;
-  padding-top: 8%;
   font-size: larger;
   font-weight: bold;
-  position: absolute;
   text-align: center;
   align-items: center;
   justify-content: center;
@@ -101,6 +108,7 @@
 
 #uc-davis {
     font-size: x-large;
+    white-space: nowrap;
 }
 
 /* @media (max-width: 1000px) {
@@ -181,7 +189,7 @@
 
 /* work page */
 .work{
-    width: 60%;
+    width: 70%;
     align-items: center;
     justify-content: center;
     margin-left: auto;
@@ -190,13 +198,12 @@
 }
 
 #work-title{
-    color: #6987A9;
-    font-weight: 150%;;
-    font-size: 330%;
+    color: white;
+    font-size: 2em;
 }
 
 .title {
-    color: #6987A9;
+    color: white;
     font-size: 110%;
 }
 .experience{
@@ -204,18 +211,27 @@
     border: 1px solid #FFFFF1;
     border-radius: 25px;
     color: #6987A9;
-    margin: 2%;
+    margin: 4% 0;
 }
 .company { 
-    color: #6987A9;
+    color: #F1A15B;
     transition: 1s;
 }
 .company:hover{
     color: #F1A15B;
+    cursor: pointer;
 }
 
 .role {
-    padding: 2%;
+    padding: 4%;
+    position: relative;
+}
+.role:hover {
+    cursor: pointer;
+}
+.role img {
+    width: 100%;
+    max-width: 15%;
 }
 
 label {
@@ -230,18 +246,31 @@ input {
     padding-top:2%;
     padding-bottom: 2%;
 }
+.project-links {
+    display: flex;
+    align-items: center;
+}
 .button { 
     background-color: #F1A15B;
     color: #01234A;
     padding: 1.5%;
-    border-radius: 25px;
+    border-radius: 9px;
     text-decoration: none;
-    margin-top: 2%;
+    margin: 2%;
     font-size: 80%;
-    font-weight: 80%;
-    margin-left: 2%;
-    margin-right: 2%;
+    font-weight: 600;
+    display: inline-block;
+    min-width: 80px;
+    text-align: center;
+    transition: 0.2s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 20px;
+}
 
+.button:hover {
+    transform: scale(1.1);
 }
 
 .date { 
@@ -250,6 +279,8 @@ input {
 }
 .short {
     display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 img{
@@ -257,7 +288,7 @@ img{
     width: 12%;
 }
 
-#quantiphi {
+/* #quantiphi {
     padding-left: 60%;
     padding-top: 1%;
     
@@ -284,13 +315,16 @@ img{
 }
 #pahunch {
     padding-left: 58%;
-}
+} */
 .role-description {
     max-height: 0;
     overflow: hidden;
     transition: 0.8s;
     transition-property: max-height;
     transition-timing-function: ease-out;
+    color: white;
+    opacity: 0.85;
+    line-height: 1.4;
 }
 
 #input1:checked~#role-description1 {
@@ -350,13 +384,28 @@ img{
     align-items: center;
     font-size: small;
     justify-content: center;
+    position: fixed;
+    bottom: 10px;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.footer.relative {
+    position: relative;
 }
 
 .contact {
-    padding: 4%;
+    padding: 12px;
+    display: flex;
+}
+.contact a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 .contact-icon {
     float: left;
+    padding-right: 10px;
 }
  
 #phone-logo {
@@ -425,8 +474,17 @@ img{
 
 /* media queries */
 @media (max-width: 1000px) {
+    .tw {
+        padding-bottom: 0;
+        margin-bottom: 2%;
+    }
+    #uc-davis {
+        font-size: 1.2em;
+    } 
+    .degree {
+        font-size: 1em;
+    }
     .content{
-        display: flex;
         flex-direction: column;
     } 
 
@@ -434,23 +492,46 @@ img{
         align-self: center;
         margin-left: 0;
         margin-right: 11%;
-        width: 40%;
-        height: 40%;
+        width: 30%;
     }
 
     .write-up {
         display: flex;
+        flex-direction: column;
         align-items: center;
         justify-content: center;
         padding-right: 20%;
-        padding-top: 20%;
-        padding-bottom: 30%;
     }
+}
+
+@media (max-width: 650px) {
     .tw {
-        padding-bottom: 10%;
+        font-size: 2em;
     }
-    .degree {
-        padding-top: 13%;
+
+    .content {
+        margin-top: 20%;
     }
     
+    #myImage {
+        width: 40%;
+    }
+
+    .work {
+        width: 80%;
+    }
+
+    .role img {
+        max-width: 25%;
+    }
+
+    .footer-link {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    #work-title {
+        font-size: 1.5em;
+    }
 }
