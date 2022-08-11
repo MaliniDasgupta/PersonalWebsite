@@ -30,18 +30,23 @@
     flex: 1;
   }
 
+.nav {
+    display: flex;
+    align-items: center;
+}
+
 .links {
     color: #FFFFF1;
     text-decoration: none;
     padding: 1%;
-    font-size: larger;
     min-width: 80px;
-    transition: all 0.2s ease;
+    font-size: 1em;
+    transition: 0.2s ease;
   } 
 
 .links:hover {
-  font-size: 130%;
-  cursor: pointer
+  font-size: 1.2em;
+  cursor: pointer;
 }
 
 /* landing page */
@@ -184,7 +189,7 @@
 
 /* work page */
 .work{
-    width: 60%;
+    width: 70%;
     align-items: center;
     justify-content: center;
     margin-left: auto;
@@ -193,13 +198,12 @@
 }
 
 #work-title{
-    color: #6987A9;
-    font-weight: 150%;;
-    font-size: 330%;
+    color: white;
+    font-size: 2em;
 }
 
 .title {
-    color: #6987A9;
+    color: white;
     font-size: 110%;
 }
 .experience{
@@ -207,27 +211,27 @@
     border: 1px solid #FFFFF1;
     border-radius: 25px;
     color: #6987A9;
-    margin: 4%;
+    margin: 4% 0;
 }
 .company { 
-    color: #6987A9;
+    color: #F1A15B;
     transition: 1s;
 }
 .company:hover{
     color: #F1A15B;
+    cursor: pointer;
 }
 
 .role {
     padding: 4%;
     position: relative;
 }
-
+.role:hover {
+    cursor: pointer;
+}
 .role img {
-    height: 80px;
-    width: auto;
-    position: absolute;
-    right: 20px;
-    top: 20px;
+    width: 100%;
+    max-width: 15%;
 }
 
 label {
@@ -250,15 +254,19 @@ input {
     background-color: #F1A15B;
     color: #01234A;
     padding: 1.5%;
-    border-radius: 25px;
+    border-radius: 9px;
     text-decoration: none;
     margin: 2%;
     font-size: 80%;
-    font-weight: 80%;
+    font-weight: 600;
     display: inline-block;
     min-width: 80px;
     text-align: center;
-    transition: all 0.2s ease;
+    transition: 0.2s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 20px;
 }
 
 .button:hover {
@@ -271,6 +279,8 @@ input {
 }
 .short {
     display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 img{
@@ -312,6 +322,9 @@ img{
     transition: 0.8s;
     transition-property: max-height;
     transition-timing-function: ease-out;
+    color: white;
+    opacity: 0.85;
+    line-height: 1.4;
 }
 
 #input1:checked~#role-description1 {
@@ -372,7 +385,7 @@ img{
     font-size: small;
     justify-content: center;
     position: fixed;
-    bottom: 0;
+    bottom: 10px;
     left: 50%;
     transform: translate(-50%);
 }
@@ -385,8 +398,14 @@ img{
     padding: 12px;
     display: flex;
 }
+.contact a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 .contact-icon {
     float: left;
+    padding-right: 10px;
 }
  
 #phone-logo {
@@ -459,6 +478,12 @@ img{
         padding-bottom: 0;
         margin-bottom: 2%;
     }
+    #uc-davis {
+        font-size: 1.2em;
+    } 
+    .degree {
+        font-size: 1em;
+    }
     .content{
         flex-direction: column;
     } 
@@ -477,19 +502,6 @@ img{
         justify-content: center;
         padding-right: 20%;
     }
-
-    .short {
-        flex-direction: column-reverse;
-    }
-
-    .role img {
-        height: auto;
-        width: 70px;
-        position: relative;
-        left: 10px;
-        top: 10px;
-        margin-bottom: 30px;
-    }
 }
 
 @media (max-width: 650px) {
@@ -505,9 +517,11 @@ img{
         width: 80%;
     }
 
-    .footer {
-        flex-direction: column;
-        margin-bottom: 20px;
-        margin-top: 30px;
+    .role img {
+        max-width: 25%;
+    }
+
+    .footer-link {
+        display: none;
     }
 }
