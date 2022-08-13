@@ -356,7 +356,7 @@ img{
 @media (max-width: 1000px) {
     .tw {
         padding-bottom: 10%;
-        margin-bottom: 2%;
+        /* margin-bottom: 2%; */
     }
     #uc-davis {
         font-size: 1.2em;
