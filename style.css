@@ -230,6 +230,13 @@ img{
     line-height: 1.4;
 }
 
+#input0:checked~#role-description0 {
+    max-height: 2000px;
+    transition: 1s;
+    transition-property: max-height;
+    transition-timing-function: ease-in-out;
+}
+
 #input1:checked~#role-description1 {
     max-height: 2000px;
     transition: 1s;
